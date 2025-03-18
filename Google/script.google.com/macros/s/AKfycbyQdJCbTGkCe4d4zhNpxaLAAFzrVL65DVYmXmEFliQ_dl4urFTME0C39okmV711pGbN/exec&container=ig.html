@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-F32JC4N3VY"></script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <script async src="https://cdn.jsdelivr.net/gh/st39/sdk@main/ga.js"></script>
+    <script async src="https://imasdk.googleapis.com/js/sdkloader/ima3.js"></script>
+    <script id="gamemonetize-sdk" src="https://cdn.jsdelivr.net/gh/st39/sdk@main/sdkjs.js"></script>
+    <script src="//www.google.com/jsapi"></script>
+    
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: black;
+        }
+
+        #container {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        ruffle-player {
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+    
+    <script src="https://cdn.jsdelivr.net/gh/st39/sdk@main/api.js"></script>
+    <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+    <script>
+        window.RufflePlayer = window.RufflePlayer || {};
+        window.RufflePlayer.config = {
+            "autoplay": "off",
+            "polyfills": true,
+            "letterbox": "on",
+            "backgroundColor": null,
+            "scale": "exactFit",
+            "allowFullscreen": true,
+            "forceScale": true,
+            "forceAlign": true,
+            "splashScreen": true,
+            "wmode": "window",
+            "unmuteOverlay": "hidden",
+            "quality": "high"
+        };
+
+        window.addEventListener("load", () => {
+            const ruffle = window.RufflePlayer.newest();
+            const player = ruffle.createPlayer();
+            const container = document.getElementById("container");
+            container.appendChild(player);
+            player.load("https://cdn.jsdelivr.net/gh/abdufarooq7272/work-v2@0db8b773c2fda77a9760f61b86c7d3bcd3c991b7/cmd/enqueuer/z_2.js");
+            player.style.width = "100%";
+            player.style.height = "100%";
+        });
+    </script>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+</html>
