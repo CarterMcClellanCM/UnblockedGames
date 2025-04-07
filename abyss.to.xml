@@ -1,0 +1,6 @@
+<Module>
+<ModulePrefs title="OVO" description="Embedded YouTube Video Gadget"/>
+<Content type="html">
+<![CDATA[ <html> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <style> html, body { padding: 0; margin: 0; overflow: hidden; display: flex; flex-direction: column; justify-content: center; align-items: center; height: 100vh; background: #444; } #video-container { width: 80vw; height: 45vw; max-width: 960px; max-height: 540px; background: white; border: 5px solid white; } iframe { width: 100%; height: 100%; border: none; } </style> </head> <body> <div id="video-container"> <iframe src="https://short.icu/T-pcB7Rp3" allowfullscreen></iframe> </div> </body> </html> ]]>
+</Content>
+</Module>
